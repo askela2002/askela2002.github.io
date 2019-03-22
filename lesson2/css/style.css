@@ -3,3 +3,48 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+h1 {
+    text-align: center;
+}
+
+.copyright {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+p {
+    text-align: left;
+    margin: auto;
+}
+
+li {
+    display: inline;
+    margin-right: 10px;
+}
+
+li:last-child {
+    margin-right: 0px;
+}
+
+ul {
+    text-align: center;
+}
+
+.footer {
+    margin: 20px 10%;
+    border: 3px solid blue;
+}
+
+main {
+    border: 3px solid #54f8ff;
+    margin: 20px 10%;
+    padding: 2%;
+}
+
+header {
+    margin-top: 20px;
+    width: 30%;
+    text-align: center;
+}
