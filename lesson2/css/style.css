@@ -6,6 +6,7 @@
 
 h1 {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .copyright {
@@ -40,11 +41,20 @@ ul {
 main {
     border: 3px solid #54f8ff;
     margin: 20px 10%;
-    padding: 2%;
+    padding: 3%;
 }
 
 header {
-    margin-top: 20px;
-    width: 30%;
-    text-align: center;
+    height: 216px;
+    margin: 5px 10%;
+    border: 3px solid cornflowerblue;
+    padding: 5px;
+}
+
+.topMenu {
+    margin-top: 90px;
+}
+
+img {
+    float: left;
 }
