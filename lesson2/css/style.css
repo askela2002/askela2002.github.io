@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    background-color: #c0fdff;
 }
 
 h1 {
@@ -39,15 +40,15 @@ ul {
 }
 
 main {
-    border: 3px solid #54f8ff;
+    border: 3px solid #ff1518;
     margin: 20px 10%;
-    padding: 3%;
+    padding: 5% 10%;
 }
 
 header {
     height: 216px;
     margin: 5px 10%;
-    border: 3px solid cornflowerblue;
+    border: 3px solid #36ed1c;
     padding: 5px;
 }
 
@@ -58,3 +59,4 @@ header {
 img {
     float: left;
 }
+
