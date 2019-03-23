@@ -42,14 +42,14 @@ ul {
 main {
     border: 3px solid #ff1518;
     margin: 20px 10%;
-    padding: 5% 10%;
+    padding: 4% 10%;
 }
 
 header {
     height: 216px;
-    margin: 20px 10%;
+    margin: 12px 10%;
     border: 3px solid #36ed1c;
-    padding: 5px;
+    padding: 4px;
 }
 
 .topMenu {
