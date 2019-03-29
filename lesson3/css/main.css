@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0% 30%;
+}
+
+main {
+    margin-top: 5px;
+    border: 1px solid gray;
+}
+
+header {
+    color: grey;
+    display: flex;
+    justify-content: space-between;
+    font-family: sans-serif;
+    align-items: flex-end;
+}
+
+.articulWord {
+    margin-left: 55%;
+}
+
+.articulNumber {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.nameOfProduct {
+    color: #368caf;
+    font-size: 45px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border-bottom: .05mm solid #368caf;
+}
+
+.mainPicture {
+    margin-top: 20px;
+    margin-left: 30%;
+    height: 300px;
+}
+
+.mainPart {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.description {
+    margin-top: 20px;
+    margin-right: 15%;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.line {
+    border-bottom: 1px solid grey;
+    font-weight: bold;
+    width: 109%;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.smallPictures {
+    height: 60px;
+    margin-right: 40px;
+}
+
+.row {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 70px;
+    margin-top: 20px;
+}
+
+.shortDescription {
+    margin-left: 70px;
+    margin-top: 30px;
+}
+
+.line2 {
+    border-bottom: 1px solid grey;
+    font-weight: bold;
+    width: 85%;
+    /*font-size: 14px;*/
+}
+
+.description2 {
+    margin-top: 10px;
+    margin-right: 10%;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.details {
+    margin-top: 10px;
+    margin-left: 70px;
+    margin-bottom: 40px;
+    font-size: 10px;
+    font-weight: lighter;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 10px;
+}
+
+.posFixed {
+    position: absolute;
+    background: rgba(255, 38, 50, 0.5);
+    top: 60px;
+    left: 450px;
+    border-radius: 50%;
+    width: 115px;
+    height: 115px;
+}
+
+.wordsFixed {
+    position: absolute;
+    top: 92px;
+    left: 467px;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
