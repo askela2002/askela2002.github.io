@@ -6,12 +6,13 @@
 }
 
 body {
-    margin: 0% 30%;
+    margin: 0 440px;
 }
 
 main {
     margin-top: 5px;
     border: 1px solid gray;
+    padding: auto;
 }
 
 header {
@@ -119,8 +120,8 @@ footer {
 .posFixed {
     position: absolute;
     background: rgba(255, 38, 50, 0.5);
-    top: 60px;
-    left: 450px;
+    top: 75px;
+    left: 453px;
     border-radius: 50%;
     width: 115px;
     height: 115px;
@@ -128,7 +129,7 @@ footer {
 
 .wordsFixed {
     position: absolute;
-    top: 92px;
+    top: 105px;
     left: 467px;
     font-size: 25px;
     font-weight: bold;
