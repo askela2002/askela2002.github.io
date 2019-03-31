@@ -55,6 +55,7 @@ header {
     font-family: Arial, sans-serif;
     font-weight: bold;
     border-bottom: .05mm solid #368caf;
+    min-width: 423px;
 }
 
 .mainPicture {
