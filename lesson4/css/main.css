@@ -152,13 +152,12 @@ footer {
 
 .wordsFixed {
     position: absolute;
-    top: 76px;
-    left: 42px;
+    top: 26px;
+    left: 14px;
     font-size: 25px;
     font-weight: bold;
     color: white;
     text-align: center;
-    z-index: 1;
 }
 
 @media screen and (max-width: 1300px) {
@@ -196,4 +195,42 @@ footer {
         min-width: 320px;
         max-width: 800px;
     }
+
+}
+
+.nameOfProduct:hover {
+    transform: translateY(160px) scale(3);
+    transition: all .7s;
+    color: #0300ff;
+    background-color: white;
+    border-bottom: .05mm solid #0300ff;
+    position:relative;
+    z-index:1;
+}
+
+.posFixed:hover {
+    transform: scale(2);
+    border-radius: 0;
+    transition: border-radius .4s;
+    background-color: green;
+}
+
+.wordsFixed:hover {
+    color: blueviolet;
+}
+
+.mainPicture:hover {
+    transform: scale(2) translate(50px, 50px);
+    transition: all .5s;
+
+}
+
+.smallPictures:hover {
+    transform: rotate(360deg) scale(9);
+    transition: all .3s;
+}
+
+.cursor:hover {
+    cursor: pointer;
+    color: red;
 }
