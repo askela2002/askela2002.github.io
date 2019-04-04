@@ -23,7 +23,7 @@ main {
 
     margin-top: 5px;
     border: 1px solid gray;
-    padding: 0 60px;
+    padding: 0 2%;
     position: relative;
 
 }
@@ -160,43 +160,88 @@ footer {
     text-align: center;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1200px) {
     main {
-        padding: 0 30px;
+        padding: 0 2%;
     }
     .mainPicture {
         margin-top: 10px;
         height: 250px;
     }
+
+    .center {
+        width: 40%;
+    }
 }
 
-@media screen and (max-width: 1100px) {
+
+@media screen and (max-width: 1000px) {
     main {
-        padding: 0 15px;
+        padding: 0 4%;
     }
     .mainPicture {
         margin-top: 10px;
         height: 250px;
     }
+
+    .center {
+        width: 55%;
+    }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
     main {
-        padding: 0 5px;
+        padding: 0 6%;
+    }
+    .mainPicture {
+        margin-top: 10px;
+        height: 250px;
+    }
+    .center {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    main {
+        padding: 0 7%;
     }
     .mainPicture {
         margin-top: 5px;
         height: 200px;
     }
     .center {
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-        min-width: 320px;
-        max-width: 800px;
+        width: 80%;
     }
-
 }
+
+
+@media screen and (max-width: 500px) {
+    main {
+        padding: 0 5%;
+    }
+    .mainPicture {
+        margin-top: 5px;
+        height: 200px;
+    }
+    .center {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    main {
+        padding: 0 3%;
+    }
+    .mainPicture {
+        margin-top: 5px;
+        height: 190px;
+    }
+    .center {
+        width: 100%;
+    }
+}
+
 
 .nameOfProduct:hover {
     transform: translateY(160px) scale(3);
