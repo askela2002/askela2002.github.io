@@ -6,26 +6,22 @@
 }
 
 body {
-    /*padding: 0 420px;*/
     min-width: 320px;
-
 }
 
 .center {
-    width: 40%;
+    /*width: 32vw;*/
     margin-left: auto;
     margin-right: auto;
     min-width: 320px;
-    max-width: 800px;
+    max-width: 500px;
 }
 
 main {
-
     margin-top: 5px;
     border: 1px solid gray;
-    padding: 0 2%;
+    padding: 0 40px;
     position: relative;
-
 }
 
 header {
@@ -38,14 +34,6 @@ header {
 }
 .minSpace{
     min-width: 105px;
-}
-.emptySpace {
-    /*max-width: 300px;*/
-    width: 310px;
-    min-width: 10px;
-}
-.articulWord {
-     min-width: 135px;
 }
 
 .articulNumber {
@@ -60,24 +48,26 @@ header {
 }
 
 .nameOfProduct {
-    color: #368caf;
+    color: #3583b0;
     font-size: 42px;
     font-family: Arial, sans-serif;
     font-weight: bold;
-    border-bottom: .05mm solid #368caf;
+    border-bottom: .05mm solid #3583b0;
     /*min-width: 423px;*/
 }
 
 .mainPicture {
     margin-top: 20px;
-    /*margin-left: 30%;*/
+    margin-right: 20px;
     height: 300px;
+    text-align: center;
 }
 
 .mainPart {
-    display: flex;
+    display: inline-flex;
     justify-content: space-between;
     margin-top: 15px;
+    flex-wrap: wrap;
     /*padding: 0 40px;*/
 }
 
@@ -160,88 +150,17 @@ footer {
     text-align: center;
 }
 
-@media screen and (max-width: 1200px) {
-    main {
-        padding: 0 2%;
-    }
-    .mainPicture {
-        margin-top: 10px;
-        height: 250px;
-    }
-
-    .center {
-        width: 40%;
-    }
-}
-
-
-@media screen and (max-width: 1000px) {
-    main {
-        padding: 0 4%;
-    }
-    .mainPicture {
-        margin-top: 10px;
-        height: 250px;
-    }
-
-    .center {
-        width: 50%;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    main {
-        padding: 0 6%;
-    }
-    .mainPicture {
-        margin-top: 10px;
-        height: 250px;
-    }
-    .center {
-        width: 70%;
-    }
-}
-
-@media screen and (max-width: 650px) {
-    main {
-        padding: 0 7%;
-    }
-    .mainPicture {
-        margin-top: 5px;
-        height: 200px;
-    }
-    .center {
-        width: 80%;
-    }
-}
-
-
 @media screen and (max-width: 500px) {
-    main {
-        padding: 0 5%;
+    .mainPart {
+        display: block;
+        text-align:center;
     }
-    .mainPicture {
-        margin-top: 5px;
-        height: 200px;
-    }
-    .center {
-        width: 90%;
+
+    .description {
+        text-align: left;
+        display: table;
     }
 }
-
-@media screen and (max-width: 400px) {
-    main {
-        padding: 0 3%;
-    }
-    .mainPicture {
-        margin-top: 5px;
-        height: 190px;
-    }
-    .center {
-        width: 100%;
-    }
-}
-
 
 .nameOfProduct:hover {
     transform: translateY(160px) scale(3);
