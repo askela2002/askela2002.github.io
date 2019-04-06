@@ -160,6 +160,16 @@ footer {
         text-align: left;
         display: table;
     }
+
+    .posFixed {
+        top: 93px;
+        left: 35px;
+    }
+
+    /*.wordsFixed {*/
+        /*top: 26px;*/
+        /*left: 14px;*/
+    /*}*/
 }
 
 .nameOfProduct:hover {
