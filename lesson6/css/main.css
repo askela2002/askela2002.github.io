@@ -37,12 +37,12 @@
 .logo {
     margin-right: 10px;
 }
-.companyName {
-    font-family: "Roboto Thin", sans-serif;
-    font-size: 30px;
-    color: #37acc6;
-    margin-top: 4px;
-}
+/*.companyName {*/
+    /*font-family: "Roboto Thin", sans-serif;*/
+    /*font-size: 30px;*/
+    /*color: #37acc6;*/
+    /*margin-top: 4px;*/
+/*}*/
 
 .topHeader__menu{
     display: flex;
@@ -148,10 +148,11 @@
     display: flex;
     margin: 0 auto;
     max-width: 940px;
+    justify-content: center;
 }
 .mainOurStory__logo {
-    margin-right: 90px;
-
+    margin-right: 85px;
+    margin-left: 70px;
 }
 .logoSolid {
     margin: 0 auto;
