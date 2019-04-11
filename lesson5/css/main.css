@@ -99,6 +99,7 @@
 
 .header__button {
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 .textOnButton {
     font-size: 16px;
@@ -149,10 +150,10 @@
 }
 .mainOurStory__logo {
     margin-right: 90px;
-    margin-left: 82px;
-}
-.mainOurStory__title {
 
+}
+.logoSolid {
+    margin: 0 auto;
 }
 
 .mainOurStory__content {
@@ -213,19 +214,35 @@
 
 .site__footer {}
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 720px) {
     .topHeader__menu{
         display: none;
+    }
+    .mainOurStory__logo {
+        margin-right: 10px;
+
+    }
+    .mainOurStory {
+        padding-top: 30px;
     }
 }
 
-
-@media screen and (max-width: 500px) {
-    .topHeader__menu{
-        display: none;
-    }
+@media screen and (max-width: 570px) {
 
     .header__slogan-text {
-        margin-top: 100px;
+        margin-top: 60px;
+    }
+
+
+    .mainOurStory {
+        padding-top: 10px;
+        flex-wrap: wrap;
+        height: auto;
+        display: block;
+        text-align: center;
+    }
+
+    .ourStoryTitle__text {
+        margin-top: 5px;
     }
 }
