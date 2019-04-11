@@ -4,20 +4,32 @@
     box-sizing: border-box;
 }
 
+
+
 .site {
+    max-width: 1600px;
 }
 
+
+
+
+
 .site__header {
-    background-image: url("../img/backGround.png"), linear-gradient(#332a55, #332a55);;
+    opacity: 0.85;
+    background-image: url("../img/backGround.png"), linear-gradient( 0deg, rgb(9,5,47) 0%, rgb(49,29,94) 100%);
     background-blend-mode: overlay;
-    height: 759px;
+    height: 670px;
     background-size: cover;
+    position: relative;
+    min-width: 320px;
 }
 
 .topHeader {
-    padding-top: 20px;
+    max-width: 940px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 15px;
 }
 .topHeader__logoAndСompanyName {
     display: flex;
@@ -42,6 +54,8 @@
     font-size: 13px;
     margin-right: 25px;
     color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
 }
 .menuElement-color {
     color: #00e0d0;
@@ -50,21 +64,25 @@
     margin: 0;
 }
 
+.menuElement:hover {
+    color: #00e0d0;
+}
+
 .header {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    height: 90%;
-    padding: 90px;
 }
-.header__slogan {
+.header__slogan-text {
     font-size: 32px;
     font-family: "Playfair Display Black", sans-serif;
     color: #FFFFFF;
-    margin-top: 50px;
+    margin-top: 160px;
+    text-align: center;
 }
 .header__line {
+    margin-top: 25px;
     border: 1px solid #00E0D0;
     width: 50px;
     /*margin: 30px auto;*/
@@ -73,13 +91,14 @@
     font-family: "Roboto Light", sans-serif;
     font-size: 14px;
     text-align: center;
-    width: 695px;
+    max-width: 695px;
     color: #FFFFFF;
-    /*margin: 0 auto;*/
+    margin-top: 30px;
+    line-height: 1.7;
 }
+
 .header__button {
-    margin-top: 10px;
-    margin-bottom: 70px;
+    margin-top: 50px;
 }
 .textOnButton {
     font-size: 16px;
@@ -87,27 +106,126 @@
     color: #00E0D0;
     border: 1px solid #00E0D0;
     border-radius: 2px;
-    padding: 4px;
+    padding: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
 }
 
 .header__dots {
+    position: absolute;
     display: flex;
-    margin-top: 70px;
+    bottom: 65px;
 }
 .dot {
     border: 1px solid #C2C2C2;
     border-radius: 50%;
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     margin-right: 10px;
 }
 .dot-color{
     background-color: #00E0D0;
 }
+
 .dot:last-child {
     margin-right: 0;
 }
 
-.site__main {}
+.dot:hover {
+    background-color: #00E0D0;
+}
+
+
+.site__main {
+
+}
+
+.mainOurStory {
+    height: 410px;
+    padding-top: 70px;
+    display: flex;
+    margin: 0 auto;
+    max-width: 940px;
+}
+.mainOurStory__logo {
+    margin-right: 90px;
+    margin-left: 82px;
+}
+.mainOurStory__title {
+
+}
+
+.mainOurStory__content {
+
+}
+
+.ourStoryTitle {
+
+}
+.ourStoryTitle__text {
+    font-size: 22px;
+    font-family: "Playfair Display", sans-serif;
+    color: rgb(65, 61, 75);
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: left;
+    text-transform: uppercase;
+    margin-top: -5px;
+
+}
+
+.ourStoryDescription {}
+.ourStoryDescription__text {
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    color: rgba(65, 61, 75, 0.749);
+    line-height: 1.571;
+    max-width: 520px;
+    margin-top: 20px;
+}
+
+.mainOurStory__video {
+    background-image: url("../img/backgroundCity.png"), linear-gradient( 0deg, rgb(9,5,47) 0%, rgb(49,29,94) 100%);
+    background-blend-mode: overlay;
+    opacity: 0.85;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.playButton {
+    margin-bottom: 30px;
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.wordsUnderPlayButton {
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    text-transform: uppercase;
+}
+
+
+
 
 .site__footer {}
+
+@media screen and (max-width: 700px) {
+    .topHeader__menu{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .topHeader__menu{
+        display: none;
+    }
+
+    .header__slogan-text {
+        margin-top: 100px;
+    }
+}
