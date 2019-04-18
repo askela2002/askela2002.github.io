@@ -148,6 +148,7 @@
     display: flex;
     margin: 0 auto;
     max-width: 940px;
+    min-width: 320px;
     justify-content: center;
 }
 .mainOurStory__logo {
@@ -196,6 +197,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    min-width: 320px;
 }
 
 .playButton {
@@ -216,7 +218,7 @@
 
 .site__footer {}
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 760px) {
     .topHeader__menu{
         display: none;
     }
@@ -236,16 +238,19 @@
         margin-top: 60px;
     }
 
-
     .mainOurStory {
         padding-top: 10px;
         flex-wrap: wrap;
-        height: auto;
-        display: block;
         text-align: center;
     }
 
+    .mainOurStory__logo {
+        margin: unset;
+    }
+
+
     .ourStoryTitle__text {
         margin-top: 5px;
+        text-align: center;
     }
 }
