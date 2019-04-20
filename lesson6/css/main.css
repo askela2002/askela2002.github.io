@@ -150,7 +150,7 @@
 }
 
 .mainOurStory {
-    height: 410px;
+    min-height: 410px;
     padding-top: 70px;
     display: flex;
     margin: 0 auto;
