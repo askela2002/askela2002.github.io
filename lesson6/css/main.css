@@ -44,6 +44,13 @@
     /*margin-top: 4px;*/
 /*}*/
 
+.burgerMenu {
+}
+
+.burgerMenu {
+    display: none;
+}
+
 .topHeader__menu{
     display: flex;
     align-items: center;
@@ -213,9 +220,6 @@
     text-transform: uppercase;
 }
 
-
-
-
 .site__footer {}
 
 @media screen and (max-width: 760px) {
@@ -230,6 +234,78 @@
         padding-top: 30px;
         height: auto;
     }
+
+    .burgerMenu {
+        display: flex;
+        height: 40px;
+        width: 40px;
+        background: white;
+        border-radius: 50px;
+        position: absolute;
+        left: 175px;
+        top: 20px;
+    }
+
+    .burgerMenu__line{
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background-color: #222;
+        display: block;
+        top: 19px;
+        left: 10px;
+     }
+
+    .burgerMenu__line::before,
+    .burgerMenu__line::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background-color: #222;
+    }
+
+    .burgerMenu__line::before {
+        transform: translateY(-5px);
+     }
+
+    .burgerMenu__line::after {
+        transform: translateY(5px);
+    }
+
+    ul {
+        display: none;
+        position: absolute;
+        top: 40px;
+    }
+
+    li {
+        width: 95px;
+        list-style-type: none;
+        margin: 15px;
+    }
+
+    .burgerMenu__menuElement {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .burgerMenu__menuElement:hover {
+        color: #00E0D0;
+    }
+    .burgerMenu:hover {
+        background-color: #492e92;
+    }
+
+    .burgerMenu:hover ul {
+        display: block;
+        background-color: #492e92;
+    }
+
+
+
+
 }
 
 @media screen and (max-width: 570px) {
