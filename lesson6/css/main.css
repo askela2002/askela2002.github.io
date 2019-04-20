@@ -273,13 +273,13 @@
         transform: translateY(5px);
     }
 
-    ul {
+    .burgerMenu ul {
         display: none;
         position: absolute;
         top: 40px;
     }
 
-    li {
+    .burgerMenu__items li {
         width: 95px;
         list-style-type: none;
         margin: 15px;
