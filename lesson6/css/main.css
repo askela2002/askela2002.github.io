@@ -196,7 +196,7 @@
 }
 
 .mainOurStory__video {
-    background-image: url("../img/backgroundCity.png"), linear-gradient( 0deg, rgb(9,5,47) 0%, rgb(49,29,94) 100%);
+    background-image: url("../img/backgroundCity.jpg"), linear-gradient( 0deg, rgb(9,5,47) 0%, rgb(49,29,94) 100%);
     background-blend-mode: overlay;
     opacity: 0.85;
     height: 550px;
