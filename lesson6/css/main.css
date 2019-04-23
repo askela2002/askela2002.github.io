@@ -16,7 +16,7 @@
 
 .site__header {
     opacity: 0.85;
-    background-image: url("../img/backGround.jpg"), linear-gradient( 0deg, rgb(9,5,47) 0%, rgb(49,29,94) 100%);
+    background-image: url("../img/background.jpg"), linear-gradient( 0deg, rgb(9,5,47) 0%, rgb(49,29,94) 100%);
     background-blend-mode: overlay;
     height: 670px;
     background-size: cover;
