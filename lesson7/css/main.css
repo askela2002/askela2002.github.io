@@ -1,0 +1,439 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.site {
+    max-width: 1600px;
+}
+
+
+.site__header {
+    opacity: 0.85;
+    background-image: url("../img/background.jpg"), linear-gradient( 0deg, rgb(9,5,47) 0%, rgb(49,29,94) 100%);
+    background-blend-mode: overlay;
+    height: 670px;
+    background-size: cover;
+    position: relative;
+    min-width: 320px;
+}
+
+.topHeader {
+    max-width: 940px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+
+.topHeader__logoAndСompanyName {
+    display: flex;
+}
+
+/*.companyName {*/
+    /*font-family: "Roboto Thin", sans-serif;*/
+    /*font-size: 30px;*/
+    /*color: #37acc6;*/
+    /*margin-top: 4px;*/
+/*}*/
+
+.burgerMenu {
+}
+
+.burgerMenu {
+    display: none;
+}
+
+.topHeader__menu{
+    display: flex;
+    align-items: center;
+}
+
+.menuElement {
+    font-family: "Roboto Black", sans-serif;
+    font-size: 13px;
+    margin-right: 25px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+
+}
+.menuElement-color {
+    color: #00e0d0;
+}
+.menuElement:last-child {
+    margin: 0;
+}
+
+.menuElement:hover {
+    color: #00e0d0;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__slogan-text {
+    font-size: 32px;
+    font-family: "Playfair Display Black", sans-serif;
+    color: #FFFFFF;
+    margin-top: 160px;
+    text-align: center;
+}
+.header__line {
+    margin-top: 25px;
+    border: 1px solid #00E0D0;
+    width: 50px;
+    /*margin: 30px auto;*/
+}
+.header__text {
+    font-family: "Roboto Light", sans-serif;
+    font-size: 14px;
+    text-align: center;
+    max-width: 695px;
+    color: #FFFFFF;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    line-height: 1.7;
+}
+
+.button {
+}
+
+.textOnButton {
+    font-size: 16px;
+    font-family: "HammersmithOne", sans-serif;
+    color: #00E0D0;
+    border: 1px solid #00E0D0;
+    border-radius: 2px;
+    padding: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.header__dots {
+    position: absolute;
+    display: flex;
+    bottom: 65px;
+}
+.dot {
+    border: 1px solid #C2C2C2;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+}
+.dot-color{
+    background-color: #00E0D0;
+}
+
+.dot:last-child {
+    margin-right: 0;
+}
+
+.dot:hover {
+    background-color: #00E0D0;
+}
+
+
+.site__main {
+
+}
+
+.mainOurStory {
+    min-height: 410px;
+    padding-top: 70px;
+    display: flex;
+    margin: 0 auto;
+    max-width: 940px;
+    min-width: 320px;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+.mainOurStory__logo {
+    margin-right: 85px;
+    margin-left: 70px;
+}
+.logoSolid {
+    margin: 0 auto;
+}
+
+.mainOurStory__content {
+
+}
+
+.ourStoryTitle {
+
+}
+.ourStoryTitle__text {
+    font-size: 22px;
+    font-family: "Playfair Display", sans-serif;
+    color: rgb(65, 61, 75);
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: left;
+    text-transform: uppercase;
+    margin-top: -5px;
+}
+
+
+
+
+.ourStoryDescription {}
+.ourStoryDescription__text {
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    color: rgba(65, 61, 75, 0.749);
+    line-height: 1.571;
+    max-width: 520px;
+    margin-top: 20px;
+}
+
+.ourStoryDescription__text:last-child {
+    margin-bottom: 45px;
+}
+
+.mainOurStory__video {
+    background-image: url("../img/backgroundCity.jpg"), linear-gradient( 0deg, rgb(9,5,47) 0%, rgb(49,29,94) 100%);
+    background-blend-mode: overlay;
+    opacity: 0.85;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-width: 320px;
+}
+
+.playButton {
+    margin-bottom: 30px;
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.wordsUnderPlayButton {
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    text-transform: uppercase;
+}
+
+.feedback {
+    min-height: 650px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    max-width: 940px;
+}
+
+.feedbackFirstColumn {
+    margin: 75px auto 0 auto;
+}
+
+.feedback__title {
+    font-weight: bold;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #413d4b;
+    margin-bottom: 30px;
+}
+
+.feedback__title {
+    font-family: "Playfair Display", sans-serif;
+}
+
+.feedbackFirstColumn__form {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.feedbackInput {
+    margin-bottom: 25px;
+    width: 460px;
+    height: 45px;
+    font-family: "Roboto Light", sans-serif;
+    font-size: 14px;
+}
+
+.feedbackInput:last-child {
+    margin-bottom: 33px;
+}
+
+.feedbackInputBig {
+    height: 200px;
+}
+
+.feedbackInput::placeholder {
+    padding-left: 20px;
+}
+
+.feedbackInputBig::placeholder {
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.submitButton {
+    padding: 13px 30px;
+}
+
+.feedbackSecondColumn {
+    margin: 75px auto 0 auto;
+}
+
+.logoFirstSubColumn {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+
+}
+
+.logoSecondSubColumn {
+    display: flex;
+    flex-direction: column;
+    margin-left: 240px;
+}
+
+.logo {
+    margin: 0 auto 52px auto;
+}
+
+.logo:first-child {
+    margin-top: 10px;
+}
+
+.logo:last-child {
+    margin-bottom: 0;
+}
+
+
+
+
+
+.site__footer {}
+
+@media screen and (max-width: 780px) {
+    .topHeader__menu{
+        display: none;
+    }
+    .mainOurStory__logo {
+        margin-right: 10px;
+
+    }
+    .mainOurStory {
+        padding-top: 30px;
+    }
+
+    .burgerMenu {
+        display: flex;
+        height: 40px;
+        width: 40px;
+        background: white;
+        border-radius: 50px;
+        position: absolute;
+        left: 175px;
+        top: 20px;
+    }
+
+    .burgerMenu__line{
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background-color: #222;
+        display: block;
+        top: 19px;
+        left: 10px;
+     }
+
+    .burgerMenu__line::before,
+    .burgerMenu__line::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background-color: #222;
+    }
+
+    .burgerMenu__line::before {
+        transform: translateY(-5px);
+     }
+
+    .burgerMenu__line::after {
+        transform: translateY(5px);
+    }
+
+    .burgerMenu ul {
+        display: none;
+        position: absolute;
+        top: 40px;
+    }
+
+    .burgerMenu__items li {
+        width: 95px;
+        list-style-type: none;
+        margin: 15px;
+    }
+
+    .burgerMenu__menuElement {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .burgerMenu__menuElement:hover {
+        color: #00E0D0;
+    }
+    .burgerMenu:hover {
+        background-color: #492e92;
+    }
+
+    .burgerMenu:hover ul {
+        display: block;
+        background-color: #492e92;
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 570px) {
+
+    .header__slogan-text {
+        margin-top: 60px;
+    }
+
+    .mainOurStory {
+        padding-top: 10px;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .mainOurStory__logo {
+        margin: unset;
+    }
+
+    .ourStoryTitle__text {
+        margin-top: 5px;
+        text-align: center;
+    }
+
+    .logoSecondSubColumn {
+        margin-left: 180px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .feedbackInput {
+        width: 90vw;
+    }
+}
+
