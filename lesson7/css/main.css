@@ -12,7 +12,6 @@
 
 
 .site__header {
-    opacity: 0.85;
     background-image: url("../img/background.jpg"), linear-gradient( 0deg, rgb(9,5,47) 0%, rgb(49,29,94) 100%);
     background-blend-mode: overlay;
     height: 670px;
@@ -30,7 +29,7 @@
 }
 
 
-.topHeader__logoAndСompanyName {
+.logoAndСompanyName {
     display: flex;
 }
 
@@ -202,13 +201,13 @@
 .mainOurStory__video {
     background-image: url("../img/backgroundCity.jpg"), linear-gradient( 0deg, rgb(9,5,47) 0%, rgb(49,29,94) 100%);
     background-blend-mode: overlay;
-    opacity: 0.85;
     height: 550px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     min-width: 320px;
+    background-size: cover;
 }
 
 .playButton {
@@ -284,7 +283,7 @@
 }
 
 .feedbackSecondColumn {
-    margin: 75px auto 0 auto;
+    margin: 75px auto 20px auto;
 }
 
 .logoFirstSubColumn {
@@ -300,23 +299,196 @@
     margin-left: 240px;
 }
 
-.logo {
+.logoOfClient {
     margin: 0 auto 52px auto;
 }
 
-.logo:first-child {
+.logoOfClient:first-child {
     margin-top: 10px;
 }
 
-.logo:last-child {
+.logoOfClient:last-child {
     margin-bottom: 0;
 }
 
 
+.site__footer {
+    min-height: 400px;
+    background: url("../img/footerBackground.jpg"), linear-gradient( 0deg, rgb(9,5,47) 0%, rgb(49,29,94) 100%);
+    background-blend-mode: overlay;
+    background-size: cover;
+    position: relative;
+    min-width: 320px;
+    padding-top: 75px;
+
+}
+.footerContent {
+    max-width: 920px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footerFirstColumn__text {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #ebeaed;
+    max-width: 285px;
+    line-height: 1.857;
+    margin-top: 25px;
+    margin-bottom: 80px;
+}
+
+.bottomTextList {
+    display: flex;
+}
+
+.bottomTextList__item {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    color: #ebeaed;
+
+
+    text-decoration: none;
+}
+.iDontKnow {
+    margin-right: 30px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.bottomTextList__item:last-child {
+    margin-right: 0;
+}
+
+
+.footerSecondColumn__title {
+    text-transform: uppercase;
+    font-family: "Roboto Black", sans-serif;
+    font-size: 15px;
+    color: #ebeaed;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.marker {
+    margin-right: 15px;
+}
+
+.footerSecondColumn__content {
+    max-width: 265px;
+}
+
+.footerSecondColumn__adress {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #ebeaed;
+    line-height: 1.857;
+    display: -webkit-box;
+}
+
+.phone {
+    margin-right: 15px;
+}
+
+.footerSecondColumn__phone {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #ebeaed;
+    line-height: 1.857;
+    display: -webkit-box;
+}
+
+
+.phoneNumber {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #ebeaed;
+}
+
+
+.footerThirdColumn__title {
+    text-transform: uppercase;
+    font-family: "Roboto Black", sans-serif;
+    font-size: 15px;
+    color: #ebeaed;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.sendEmail {
+    display: flex;
+}
+
+
+.inputEmail {
+    height: 45px;
+    border: 1px solid #d9d8de;
+    background-color: rgba(0,0,0,0);
+    width: 210px;
+    color: #d9d8de;
+    margin-right: 10px;
+}
 
 
 
-.site__footer {}
+.inputEmail::placeholder {
+    text-align: center;
+    color: #d9d8de;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+}
+
+.buttonSendEmail {
+    width: 70px;
+    height: 45px;
+    opacity: 0.5;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    background-color: rgba(189, 189, 189, 0.27);
+}
+
+.paperPlane {
+    position: relative;
+    z-index: 5;
+}
+
+.socialMedia {
+    height: 35px;
+    width: 35px;
+
+}
+
+.socialMedia:last-child {
+    margin-right: 0;
+}
+
+.socialMediaIcons {
+    margin-top: 25px;
+}
+
+.socialMediaLinks{
+    margin-right: 5px;
+}
+
+.copyright {
+    margin-top: 70px;
+}
+
+.footerText {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #ebeaed;
+    text-align: right;
+}
+
+
+
 
 @media screen and (max-width: 780px) {
     .topHeader__menu{
@@ -428,7 +600,7 @@
         margin-left: 180px;
     }
 
-    .logo {
+    .logoOfClient {
         width: 120px;
     }
 
