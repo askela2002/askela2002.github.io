@@ -128,7 +128,8 @@
       font-family: "Playfair Display", sans-serif;
       font-size: 22px;
       color: #413d4b;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      font-weight: bold; }
     .mainWorks__header .mainWorksDetailsArrow {
       display: flex; }
       .mainWorks__header .mainWorksDetailsArrow .mainWorksDetails {
