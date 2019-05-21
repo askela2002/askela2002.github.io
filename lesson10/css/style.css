@@ -1,0 +1,106 @@
+.icon {
+  font-size: 48px;
+  color: grey; }
+
+.icon-less {
+  font-size: 30px; }
+
+.icon-blue {
+  color: #1b9af7; }
+
+.icon-lightBlue {
+  color: #77cbfb; }
+
+.icon-green {
+  color: #40f75d; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.main__title {
+  font-size: 15px;
+  text-transform: uppercase;
+  margin-top: 30px;
+  margin-left: 540px; }
+
+.main__addTask {
+  margin-top: 55px;
+  margin-left: 150px;
+  display: flex; }
+  .main__addTask .textTask {
+    font-size: 15px;
+    border-bottom: 1px solid grey;
+    width: 660px;
+    color: grey;
+    margin-right: 15px; }
+  .main__addTask .addTaskButton {
+    width: 110px;
+    height: 30px;
+    background: #0097f4;
+    color: white; }
+
+.main__actionsWithTasks {
+  margin-left: 80px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center; }
+  .main__actionsWithTasks .actionsWithTasks__combinedIcon {
+    height: 70px;
+    margin-left: 20px; }
+    .main__actionsWithTasks .actionsWithTasks__combinedIcon .textInIcon {
+      position: relative;
+      top: -31px;
+      text-align: center;
+      color: grey;
+      font-size: 20px;
+      font-weight: bold; }
+    .main__actionsWithTasks .actionsWithTasks__combinedIcon .fa-sort-down {
+      content: "\f0dd";
+      position: relative;
+      top: -62px; }
+
+.main .fa-search {
+  border-bottom: 1px solid grey;
+  width: 540px; }
+
+.main .mainTasksTable {
+  min-width: 850px; }
+  .main .mainTasksTable__emptyRow {
+    height: 20px; }
+  .main .mainTasksTable td {
+    text-align: center;
+    vertical-align: top; }
+  .main .mainTasksTable .positionLeft {
+    text-align: left; }
+  .main .mainTasksTable__date {
+    text-align: center; }
+  .main .mainTasksTable .greyRectangle {
+    width: 45px;
+    height: 35px;
+    background: grey;
+    margin-left: 20px; }
+    .main .mainTasksTable .greyRectangle__notation {
+      color: white;
+      text-align: center;
+      padding-top: 8px; }
+  .main .mainTasksTable .combinedArrows {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    margin-right: 10px; }
+  .main .mainTasksTable__task {
+    width: 540px;
+    min-height: 45px;
+    background: #eeeeee;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: auto; }
+    .main .mainTasksTable__task .task {
+      color: #3a3a3a;
+      margin-left: 10px;
+      font-size: 15px; }
+    .main .mainTasksTable__task-blue {
+      background: #d1eef4; }
