@@ -8,12 +8,32 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
     <title>Title</title>
 </head>
-<body>
+<body id="body">
 
-<div class="main">
+
+<div id="deletionConfirm" class="confirmDeletion">
+    <p class="deleteItem">
+        Delete item?
+    </p>
+
+    <div class="buttonNo" id="buttonNo">
+        NO
+    </div>
+
+    <div class="buttonYes" id="buttonYes">
+        <p class="buttonYes__text">
+            YES
+        </p>
+    </div>
+</div>
+
+
+
+<div id="main" class="main">
     <p id="todo" class="main__title">
         todo list
     </p>
+
 
     <div class="main__addTask">
         <input id="taskToAdd" class="inputFieldTask" type="text" placeholder="Task">
@@ -26,6 +46,7 @@
 
         <table class="mainTasksTable">
 
+            <thead class="mainTasksTable__headOfTable" id="headOfTable">
             <tr>
                 <th>
                     <i class="fas fa-sort icon"></i>
@@ -50,6 +71,7 @@
                     <i class="fas fa-filter icon icon-less"></i>
                 </th>
             </tr>
+            </thead>
 
             <tbody id="tasks"></tbody>
 

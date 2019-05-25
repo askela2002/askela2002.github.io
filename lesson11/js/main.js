@@ -1,13 +1,17 @@
 "use strict";
 
+
 let buttonAddTask = document.querySelector('#buttonAddTask');
 let taskToAdd = document.querySelector("#taskToAdd");
 
+if (localStorage.length > 0) {
+    document.getElementById('headOfTable').classList.remove('mainTasksTable__headOfTable');
+}
 
-// To render todolist
+
 renderTodo();
 
-// To add a task
+// Adds task
 buttonAddTask.onclick = function () {
     let today = new Date();
     let year = today.getFullYear();
@@ -42,39 +46,42 @@ buttonAddTask.onclick = function () {
 
     localStorage.setItem(taskKey, JSON.stringify(saveDataToStorage));
 
+    document.getElementById('headOfTable').classList.remove('mainTasksTable__headOfTable');
+
     renderTodo();
 };
 
-function renderTodo() {
-    let rowOfTheTable = '';
-    for (let i = localStorage.length - 1; i > -1; --i) {
-        let date = JSON.parse(localStorage.getItem(localStorage.key(i))).date;
-        let time = JSON.parse(localStorage.getItem(localStorage.key(i))).time;
-        let task = JSON.parse(localStorage.getItem(localStorage.key(i))).task;
-        let priority = JSON.parse(localStorage.getItem(localStorage.key(i))).priority;
+// Deletes a task
+function deletesTask() {
+    for (let i = 0; i < localStorage.length; i++) {
+        let deleteTask = document.getElementById('deleteTask' + i);
 
-        rowOfTheTable += '<tr>';
+        deleteTask.onclick = function () {
 
-        // The first column
-        rowOfTheTable += '<td>' + date + '<br>' + time + '</td>';
+            document.getElementById('deletionConfirm').classList.add('deletionConfirmShow');
+            document.getElementById("main").style.display = "none";
+            document.getElementById("body").classList.add('redBackground');
 
-        // The second column
-        rowOfTheTable += '<td><div class="greyRectangle"><p id="priority" class="greyRectangle__notation">' + priority + '</p></div></td>';
+            document.getElementById("buttonYes").onclick = function () {
 
-        // The third column
-        rowOfTheTable += '<td><div class="combinedArrows"> <i id="increasePriority' + i +'" class="fas fa-chevron-up icon-blue"></i> <i id="decreasePriority' + i +'" class="fas fa-chevron-down icon-blue"></i></div></td>';
+                localStorage.removeItem(localStorage.key(i));
 
-        // The fourth column
-        rowOfTheTable += '<td><div class="mainTasksTable__task"><p class="task" id="task">' + task + '</p></div></td>';
+                if (localStorage.length === 0) {
+                    document.getElementById('headOfTable').classList.add('mainTasksTable__headOfTable');
+                }
+                document.getElementById("body").classList.remove('redBackground');
+                document.getElementById('deletionConfirm').classList.remove('deletionConfirmShow');
+                document.getElementById("main").style.display = "flex";
+                renderTodo();
+            };
 
-        // The fifth column
-        rowOfTheTable += '<td><i class="far fa-edit icon-less icon-green"></i><i class="fas fa-check-circle icon-less icon-blue"></i><i id="deleteTask' + i + '" class="fas fa-trash-alt icon-less icon-blue"></i> </td>';
-
-        rowOfTheTable += '</tr>';
+            document.getElementById("buttonNo").onclick = function () {
+                document.getElementById("main").style.display = "flex";
+                document.getElementById("body").classList.remove('redBackground');
+                document.getElementById('deletionConfirm').classList.remove('deletionConfirmShow');
+            }
+        };
     }
-    document.getElementById("tasks").innerHTML = rowOfTheTable;
-    incAndDecPrior();
-    deletesTask();
 }
 
 // Increases and decreases priority
@@ -86,7 +93,7 @@ function incAndDecPrior() {
         increasePriority.onclick = function () {
             let oldPriority = JSON.parse(localStorage.getItem(localStorage.key(i)));
 
-            if (+oldPriority.priority  > 1) {
+            if (+oldPriority.priority > 1) {
                 oldPriority['priority'] = +oldPriority.priority - 1;
             }
 
@@ -105,16 +112,39 @@ function incAndDecPrior() {
     }
 }
 
-// Deletes a task
-function deletesTask() {
-    for (let i = 0; i < localStorage.length; i++) {
-        let deleteTask = document.getElementById('deleteTask' + i);
+// Renders main page
+function renderTodo() {
+    let rowOfTheTable = '';
+    for (let i = localStorage.length - 1; i > -1; --i) {
+        let date = JSON.parse(localStorage.getItem(localStorage.key(i))).date;
+        let time = JSON.parse(localStorage.getItem(localStorage.key(i))).time;
+        let task = JSON.parse(localStorage.getItem(localStorage.key(i))).task;
+        let priority = JSON.parse(localStorage.getItem(localStorage.key(i))).priority;
 
-        deleteTask.onclick = function () {
+        rowOfTheTable += '<tr>';
 
-            localStorage.removeItem(localStorage.key(i));
-            renderTodo();
-        };
+        // The first column
+        rowOfTheTable += '<td>' + date + '<br>' + time + '</td>';
+
+        // The second column
+        rowOfTheTable += '<td><div class="greyRectangle"><p id="priority" class="greyRectangle__notation">' + priority + '</p></div></td>';
+
+        // The third column
+        rowOfTheTable += '<td><div class="combinedArrows"> <i id="increasePriority' + i + '" class="fas fa-chevron-up icon-blue"></i> <i id="decreasePriority' + i + '" class="fas fa-chevron-down icon-blue"></i></div></td>';
+
+        // The fourth column
+        rowOfTheTable += '<td><div class="mainTasksTable__task"><p class="task" id="task">' + task + '</p></div></td>';
+
+        // The fifth column
+        rowOfTheTable += '<td><i class="far fa-edit icon-less icon-green"></i><i class="fas fa-check-circle icon-less icon-blue"></i><i id="deleteTask' + i + '" class="fas fa-trash-alt icon-less icon-blue"></i> </td>';
+
+        rowOfTheTable += '</tr>';
     }
+    document.getElementById("tasks").innerHTML = rowOfTheTable;
+    incAndDecPrior();
+    deletesTask();
 }
+
+
+
 

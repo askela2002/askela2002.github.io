@@ -19,6 +19,46 @@
   padding: 0;
   box-sizing: border-box; }
 
+.confirmDeletion {
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 41.5%;
+  width: 250px;
+  height: 130px;
+  background: #eeeeee; }
+  .confirmDeletion .deleteItem {
+    position: relative;
+    text-align: center;
+    top: 30px;
+    font-size: 20px;
+    font-family: sans-serif; }
+  .confirmDeletion .buttonNo {
+    position: relative;
+    top: 70px;
+    left: 50px;
+    color: #0097f4;
+    font-family: sans-serif; }
+  .confirmDeletion .buttonYes {
+    position: relative;
+    top: 45px;
+    left: 115px;
+    width: 90px;
+    height: 30px;
+    background: #0097f4; }
+    .confirmDeletion .buttonYes__text {
+      position: relative;
+      top: 6px;
+      color: white;
+      text-align: center;
+      font-family: sans-serif; }
+
+.deletionConfirmShow {
+  display: unset; }
+
+.redBackground {
+  background: red; }
+
 .main {
   display: flex;
   flex-direction: column; }
@@ -68,6 +108,8 @@
     width: 540px; }
   .main .mainTasksTable {
     min-width: 850px; }
+    .main .mainTasksTable__headOfTable {
+      display: none; }
     .main .mainTasksTable__emptyRow {
       height: 20px; }
     .main .mainTasksTable__searchTask {
