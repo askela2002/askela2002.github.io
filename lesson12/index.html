@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <title>Title</title>
+</head>
+<body id="body">
+
+
+<div id="deletionConfirm" class="confirmDeletion">
+    <p class="deleteItem">
+        Delete item?
+    </p>
+
+    <div class="buttonNo" id="buttonNo">
+        NO
+    </div>
+
+    <div class="buttonYes" id="buttonYes">
+        <p class="buttonYes__text">
+            YES
+        </p>
+    </div>
+</div>
+
+<div class="editText" id="editTask">
+    <p class="editText__title"> Edit text</p>
+    <label for="text"></label>
+    <textarea class="editText__area" name="editTaskArea" id="text" cols="30" rows="10"></textarea>
+    <div class="buttonCancel" id="buttonCancel">
+        CANCEL
+    </div>
+    <div class="buttonSave" id="buttonSave">
+        <p class="buttonSave__text">
+            SAVE
+        </p>
+    </div>
+</div>
+
+
+<div id="main" class="main">
+    <p id="todo" class="main__title">
+        todo list
+    </p>
+
+
+    <div class="main__addTask">
+        <input id="taskToAdd" class="inputFieldTask" type="text" placeholder="Task">
+        <button id="buttonAddTask" class="addTaskButton">
+            ADD
+        </button>
+    </div>
+
+    <div class="main__actionsWithTasks">
+
+        <table class="mainTasksTable">
+
+            <thead class="mainTasksTable__headOfTable" id="headOfTable">
+            <tr>
+                <th>
+                    <div class="actionsWithTasks__combinedIconDate">
+                        <i class="fas fa-caret-up icon iconDateAsc" id="dateAsc"></i>
+                        <i class="fas fa-caret-down icon iconDateDesc" id="dateDesc"></i>
+                    </div>
+                </th>
+
+
+                <th>
+                    <div class="actionsWithTasks__combinedIcon">
+                        <i class="fas fa-caret-up icon iconAsc" id="priorityAsc"></i>
+                        <p class="textInIcon">123</p>
+                        <i class="fas fa-caret-down icon iconDesc" id="priorityDesc"></i>
+                    </div>
+                </th>
+
+                <th></th>
+
+                <th>
+                    <input type="text" class="mainTasksTable__searchTask" placeholder="&#xF002"/>
+                </th>
+
+                <th>
+                    <i class="fas fa-filter icon icon-less"></i>
+                </th>
+            </tr>
+            </thead>
+
+            <tbody id="tasks"></tbody>
+
+        </table>
+    </div>
+
+</div>
+
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
