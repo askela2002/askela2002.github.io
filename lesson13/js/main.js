@@ -1,12 +1,14 @@
 "use strict";
 
-
 let buttonAddTask = document.querySelector('#buttonAddTask');
 let taskToAdd = document.querySelector("#taskToAdd");
 let orderPriority;
 let orderDate;
 let showFilter = "noFilter";
 let search;
+let allTasks = [];
+
+renderTodo();
 
 document.querySelector("#searchInput").oninput = function () {
     search = document.querySelector("#searchInput").value;
@@ -19,7 +21,6 @@ document.querySelector("#filter").onclick = function () {
     } else {
         showFilter = "noFilter";
     }
-
     renderTodo();
 };
 
@@ -41,15 +42,10 @@ document.getElementById("priorityAsc").onclick = function () {
     renderTodo();
 };
 
-
+// Shows head of table
 if (localStorage.length > 0) {
     document.getElementById('headOfTable').classList.remove('mainTasksTable__headOfTable');
 }
-
-let allTasks = [];
-
-
-renderTodo();
 
 // Adds task
 buttonAddTask.onclick = function () {
@@ -98,6 +94,20 @@ buttonAddTask.onclick = function () {
     }
 };
 
+// Sorts by date desc order
+function dateDescOrder() {
+    allTasks.sort(function (a, b) {
+        return b.key - a.key;
+    });
+}
+
+// Sorts by date asc order
+function dateAscOrder() {
+    allTasks.sort(function (a, b) {
+        return a.key - b.key;
+    });
+}
+
 // Deletes a task
 function deletesTask() {
     // console.log("delete-fn");
@@ -105,6 +115,13 @@ function deletesTask() {
         let deleteTask = document.getElementById('deleteTask' + i);
 
         deleteTask.onclick = function () {
+            document.onkeydown = function(event) {
+                if (event.code==="Escape"){
+                    document.getElementById("main").style.display = "flex";
+                    document.getElementById("body").classList.remove('redBackground');
+                    document.getElementById('deletionConfirm').classList.remove('deletionConfirmShow');
+                }
+            };
 
             document.getElementById('deletionConfirm').classList.add('deletionConfirmShow');
             document.getElementById("main").style.display = "none";
@@ -128,7 +145,7 @@ function deletesTask() {
                 document.getElementById("body").classList.remove('redBackground');
                 document.getElementById('deletionConfirm').classList.remove('deletionConfirmShow');
             }
-        };
+        }
     }
 }
 
@@ -194,7 +211,6 @@ function incAndDecPrior() {
 
 // Edits a task
 function editTask() {
-    // console.log("edit-fn");
     for (let i = 0; i < allTasks.length; i++) {
         let editTask = document.getElementById('editTask' + i);
 
@@ -208,6 +224,13 @@ function editTask() {
                 document.getElementById("editTask").classList.remove("editTextShow");
             };
 
+            document.onkeydown = function(event) {
+                if (event.code==="Escape"){
+                    document.getElementById("editTask").classList.remove("editTextShow");
+                }
+            };
+
+
             let saveButton = document.getElementById("buttonSave");
             saveButton.onclick = function () {
                 oldTask.task = document.getElementById("text").value;
@@ -220,13 +243,30 @@ function editTask() {
     }
 }
 
+// Sorts priority desc order
+function priorityDescOrder() {
+    allTasks.sort(function (a, b) {
+        if (a.priority === b.priority) {
+            return +a.key - +b.key;
+        } else {
+            return b.priority - a.priority;
+        }
+    });
+}
 
-
-
+// Sorts priority desc order
+function priorityAscOrder() {
+    allTasks.sort(function (a, b) {
+        if (a.priority === b.priority) {
+            return +a.key - +b.key;
+        } else {
+            return a.priority - b.priority;
+        }
+    });
+}
 
 // Reads data from LS and sorts with respect to priority
 function readDataLocalStorage() {
-
 
     if (showFilter === "filter") {
         for (let i = 0; i < localStorage.length; i++) {
@@ -240,30 +280,22 @@ function readDataLocalStorage() {
         }
     }
 
-    if (search){
+    if (search) {
         allTasks = [];
         let i = 0;
         while (i < localStorage.length) {
             let taskForSearch = JSON.parse(localStorage.getItem(localStorage.key(i))).task;
             let target = document.querySelector("#searchInput").value;
             if (target.length > 0) {
-                let pos = 0;
-                while (true) {
-                    let foundPos = taskForSearch.indexOf(target, pos);
-                    if (foundPos === -1) {
-                        i++;
-                        break;
-                    } else{
-                        allTasks.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
-                        i++;
-                        break;
-                    }
-                    pos = foundPos + 1;
+                let foundPos = taskForSearch.indexOf(target);
+                if (foundPos === -1) {
+                } else {
+                    allTasks.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
                 }
             }
+            i++;
         }
     }
-
 
 
     allTasks.sort(function (a, b) {
@@ -272,7 +304,7 @@ function readDataLocalStorage() {
         } else {
             return a.priority - b.priority;
         }
-    });
+    })
 }
 
 // Renders main page
@@ -282,24 +314,17 @@ function renderTodo() {
     readDataLocalStorage();
 
     if (orderPriority === "desc") {
-        console.log("pD");
         priorityDescOrder();
     } else if (orderDate === "desc") {
-        console.log("dD");
         dateDescOrder();
     } else if (orderDate === "asc") {
-        console.log("dA");
         dateAscOrder();
     } else if (orderPriority === "asc") {
-        console.log("pA");
         priorityAscOrder();
     }
+
     orderDate = "";
     orderPriority = "";
-
-
-    console.log("exit");
-    console.log(allTasks);
 
     let rowOfTheTable = '';
 
@@ -346,41 +371,6 @@ function renderTodo() {
     incAndDecPrior();
 }
 
-// Sorts priority desc order
-function priorityDescOrder() {
-    allTasks.sort(function (a, b) {
-        if (a.priority === b.priority) {
-            return +a.key - +b.key;
-        } else {
-            return b.priority - a.priority;
-        }
-    });
-}
-
-// Sorts priority desc order
-function priorityAscOrder() {
-    allTasks.sort(function (a, b) {
-        if (a.priority === b.priority) {
-            return +a.key - +b.key;
-        } else {
-            return a.priority - b.priority;
-        }
-    });
-}
-
-// Sorts date desc order
-function dateDescOrder() {
-    allTasks.sort(function (a, b) {
-        return b.key - a.key;
-    });
-}
-
-// Sorts date asc order
-function dateAscOrder() {
-    allTasks.sort(function (a, b) {
-        return a.key - b.key;
-    });
-}
 
 
 
