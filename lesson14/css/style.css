@@ -1,0 +1,220 @@
+.icon {
+  font-size: 48px;
+  color: grey; }
+
+.iconDesc {
+  position: relative;
+  top: -53px; }
+
+.iconAsc {
+  position: relative;
+  top: -12px; }
+
+.iconDateAsc {
+  position: relative;
+  left: 20px;
+  top: -16px; }
+
+.iconDateDesc {
+  position: relative;
+  left: -14px;
+  top: 11px; }
+
+.icon-less {
+  font-size: 30px; }
+
+.icon-blue {
+  color: #1b9af7; }
+
+.icon-lightBlue {
+  color: #77cbfb; }
+
+.icon-green {
+  color: #40f75d; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.confirmDeletion {
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 41.5%;
+  width: 250px;
+  height: 130px;
+  background: #eeeeee; }
+  .confirmDeletion .deleteItem {
+    position: relative;
+    text-align: center;
+    top: 30px;
+    font-size: 20px;
+    font-family: sans-serif; }
+  .confirmDeletion .buttonNo {
+    position: relative;
+    top: 70px;
+    left: 50px;
+    color: #0097f4;
+    font-family: sans-serif; }
+  .confirmDeletion .buttonYes {
+    position: relative;
+    top: 45px;
+    left: 115px;
+    width: 90px;
+    height: 30px;
+    background: #0097f4; }
+    .confirmDeletion .buttonYes__text {
+      position: relative;
+      top: 6px;
+      color: white;
+      text-align: center;
+      font-family: sans-serif; }
+
+.deletionConfirmShow {
+  display: unset; }
+
+.redBackground {
+  background: red; }
+
+.lightBlueColor {
+  color: #77cbfb; }
+
+.lightBlueColorBackground {
+  background: #d1eef4; }
+
+.greyBackground {
+  background: #eeeeee; }
+
+.editText {
+  display: none;
+  position: absolute;
+  top: 35%;
+  left: 41%;
+  width: 320px;
+  height: 230px;
+  background: #edec1e; }
+  .editText__title {
+    position: relative;
+    top: 10px;
+    text-align: center; }
+  .editText__area {
+    position: relative;
+    top: 20px;
+    left: 30px;
+    width: 260px; }
+  .editText .buttonCancel {
+    position: relative;
+    top: 30px;
+    left: 65px;
+    color: #0097f4;
+    font-family: sans-serif; }
+  .editText .buttonSave {
+    position: relative;
+    top: 5px;
+    left: 180px;
+    width: 90px;
+    height: 30px;
+    background: #0097f4; }
+    .editText .buttonSave__text {
+      position: relative;
+      top: 6px;
+      color: white;
+      text-align: center;
+      font-family: sans-serif; }
+
+.editTextShow {
+  display: unset; }
+
+.main {
+  display: flex;
+  flex-direction: column; }
+  .main__title {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    text-align: center; }
+  .main__addTask {
+    display: flex;
+    margin: 55px auto 0;
+    padding-left: 135px; }
+    .main__addTask .inputFieldTask {
+      width: 600px;
+      margin-right: 10px;
+      height: 30px; }
+    .main__addTask .textTask {
+      font-size: 15px;
+      border-bottom: 1px solid grey;
+      width: 660px;
+      color: grey;
+      margin-right: 15px; }
+    .main__addTask .addTaskButton {
+      width: 110px;
+      height: 30px;
+      background: #0097f4;
+      color: white; }
+  .main__actionsWithTasks {
+    margin: 30px auto; }
+    .main__actionsWithTasks .actionsWithTasks__combinedIcon {
+      height: 70px;
+      margin-left: 20px;
+      top: 6px;
+      position: relative; }
+      .main__actionsWithTasks .actionsWithTasks__combinedIcon .textInIcon {
+        position: relative;
+        top: -31px;
+        text-align: center;
+        color: grey;
+        font-size: 20px;
+        font-weight: bold; }
+      .main__actionsWithTasks .actionsWithTasks__combinedIcon .fa-sort-down {
+        content: "\f0dd";
+        position: relative;
+        top: -62px; }
+  .main .fa-search {
+    border-bottom: 1px solid grey;
+    width: 540px; }
+  .main .mainTasksTable {
+    min-width: 777px; }
+    .main .mainTasksTable__headOfTable {
+      display: none;
+      text-align: center; }
+    .main .mainTasksTable__emptyRow {
+      height: 20px; }
+    .main .mainTasksTable__searchTask {
+      width: 540px;
+      height: 30px;
+      font-family: Arial, FontAwesome, sans-serif;
+      font-size: 20px; }
+    .main .mainTasksTable td {
+      text-align: center;
+      vertical-align: top; }
+    .main .mainTasksTable__date {
+      text-align: center; }
+    .main .mainTasksTable .greyRectangle {
+      width: 45px;
+      height: 35px;
+      background: grey;
+      margin-left: 20px; }
+      .main .mainTasksTable .greyRectangle__notation {
+        color: white;
+        text-align: center;
+        padding-top: 8px; }
+    .main .mainTasksTable .combinedArrows {
+      display: flex;
+      flex-direction: column;
+      padding-left: 30px;
+      margin-right: 10px; }
+    .main .mainTasksTable__task {
+      width: 540px;
+      min-height: 45px;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      margin: auto; }
+      .main .mainTasksTable__task .task {
+        color: #3a3a3a;
+        margin-left: 10px;
+        font-size: 15px; }
+      .main .mainTasksTable__task-blue {
+        background: #d1eef4; }
