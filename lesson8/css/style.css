@@ -230,7 +230,8 @@
   box-sizing: border-box; }
 
 .site {
-  max-width: 1600px; }
+/*   max-width: 1600px;  */
+}
 
 .site__header {
   background-image: url("../img/background.jpg"), linear-gradient(0deg, #09052f 0%, #311d5e 100%);
